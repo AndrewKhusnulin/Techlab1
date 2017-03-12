@@ -38,6 +38,13 @@ void difference(TextFile fdiff1, TextFile fdiff2)
 };
 int main(int argc, char *argv[])
 {
+	if (argc < 3)
+	{
+		cout << "Not enough parameters!" << endl;
+		system("pause");
+		return 1;
+	}
+
 	TextFile File1, File2;
 	File1.upload(argv[1]);
 	File2.upload(argv[2]);
