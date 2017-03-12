@@ -32,7 +32,7 @@ void difference(TextFile fdiff1, TextFile fdiff2)
 	for (unsigned int i = 0; i < fdiff1.buffer.size(); ++i)
 	{
 		for (j=0; j < fdiff2.buffer.size(); ++j) 
-			(get<1>(fdiff1.buffer[i]) == get<1>(fdiff2.buffer[j])) ? j+=fdiff2.buffer.size() : NULL ; // Если найдена хоть одна строка, инициируем выход из цикла
+			(get<1>(fdiff1.buffer[i]) == get<1>(fdiff2.buffer[j])) ? j+=fdiff2.buffer.size() : NULL ;
 		(j == fdiff2.buffer.size()) ? cout << "File name: " << fdiff1.fname << "; line: " << i + 1 << "; difference: " << get<0>(fdiff1.buffer[i]) << endl : cout ;
 	}
 };
